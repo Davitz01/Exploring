@@ -15,13 +15,11 @@ library("data.table")
 
 setwd("~/Desktop/datasciencecoursera/4_Exploratory_Data_Analysis/project/data")
 
-#Reads in data from file then subsets data for specified dates
-powerDT <- data.table::fread(input = "household_power_consumption.txt"
+powerDT <- data.table::fread(input = "household_power_consumption.txt" #Reads in data from file then subsets data for specified dates
                              , na.strings="?"
                              )
 
-# Prevents histogram from printing in scientific notation
-powerDT[, Global_active_power := lapply(.SD, as.numeric), .SDcols = c("Global_active_power")]
+powerDT[, Global_active_power := lapply(.SD, as.numeric), .SDcols = c("Global_active_power")] # Prevents histogram from printing in scientific notation
 
 # Change Date Column to Date Type
 powerDT[, Date := lapply(.SD, as.Date, "%d/%m/%Y"), .SDcols = c("Date")]
