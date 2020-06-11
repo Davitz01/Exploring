@@ -6,9 +6,9 @@ Dataset: Electric power consumption [20Mb]
 Description: Measurements of electric power consumption in one household with a one-minute sampling rate over a period of almost 4 years. Different electrical quantities and some sub-metering values are available.
 
 
-# First plot
+  # First plot
 
-library("data.table")
+  library("data.table")
 
 setwd("~/Desktop/datasciencecoursera/4_Exploratory_Data_Analysis/project/data")
 
