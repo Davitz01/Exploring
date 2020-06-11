@@ -31,7 +31,7 @@ Description: Measurements of electric power consumption in one household with a 
 
         dev.off()
         
-        
+
         
           # Plot 2       
           library("data.table")
